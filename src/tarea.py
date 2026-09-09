@@ -59,5 +59,5 @@ class TareaModel:
         Método de formateo que convierte el objeto en una representación en texto clara.
         Para ser desplegada en la interfaz de usuario (CLI)
         """
-        valido = "OK" if self.estado == "completada" else ("➔" if self.estado == "en progreso" else "X")
+        valido = "OK" if self.estado == "completada" else ("->" if self.estado == "en progreso" else "X")
         return f"[{valido} {self.estado.upper()}] {self.nombre} (Vence: {self.fechaVencimiento})\n    Descripción: {self.descripcion}"
