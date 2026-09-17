@@ -77,9 +77,9 @@ class TestGestorTareas(unittest.TestCase):
         self.gestor.agregarTarea(self.t1)
         
         resultado = self.gestor.actualizarTarea(
-            nombre_actual="Comprar leche",
-            nuevo_estado="completada",
-            nueva_descripcion="Mercado realizado!"
+            nombreActual="Comprar leche",
+            nuevoEstado="completada",
+            nuevaDescripcion="Mercado realizado!"
         )
         
         self.assertTrue(resultado)
@@ -88,7 +88,7 @@ class TestGestorTareas(unittest.TestCase):
 
     def test_cp08_actualizar_tarea_inexistente(self):
         """CP-08: Verificar que intentar actualizar una tarea que no existe retorne falso."""
-        resultado = self.gestor.actualizarTarea(nombre_actual="Inexistente", nuevo_estado="completada")
+        resultado = self.gestor.actualizarTarea(nombreActual="Inexistente", nuevoEstado="completada")
         self.assertFalse(resultado)
 
     def test_cp09_eliminar_tarea(self):
